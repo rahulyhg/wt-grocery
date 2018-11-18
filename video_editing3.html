@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS/video_style.css"></link>
+<script>
+	var src_array=['src1','src2','src3','src4','src5'];
+	var video_src = document.getElementsByTagName("source");
+	var item= document.getElementById("how_to_use_utensils");
+	console.log(item);
+</script>
+<script src="video_script.js"></script>
+</head>
+<body>
+<div id="video_player_box">
+	<video  id="my_video" width ="550" height="320" autoplay><!--controls="controls" // put for default controls-->
+		<source src="videos/tc.mp4"> <!-- controls help to pause play etc-->
+	</video>
+	<div id="video_controls_bar"> 
+		<button id="playpausebtn">Pause</button>
+		<input id="seekslider" type="range" min="0" max="100" value="0" step ="1" >
+		<span id="currtimetext">00:00</span>/<span id="durtimetext">00:00</span>
+		<button id="mutebtn">Mute</button>
+		<input id="volumeslider" type="range" min="0" max="100" value="100" step ="1" >
+		<span id="volume_percentage"></span>
+		<button id="fullscreenbtn">[ &nbsp ]</button>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<html>
+<head>
+  <link rel="stylesheet" href="CSS/form_style.css">
+  <link rel="stylesheet" href="CSS/test.css">
+	<script>
+	window.onload = function (){
+		var PM = document.getElementById("Payment_Method");
+		
+		console.log(PM);
+		PM.onchange = function (){
+			var PMv= PM.value;
+			console.log(PMv);
+			if(PMv=="CC")
+			{
+				console.log('hi');
+				var PMdiv =  document.getElementById('option_selected');
+				if (PMdiv.childElementCount == 1){  
+          PMdiv.removeChild(PMdiv.firstChild);
+        }
+				var PMnumber = document.createElement("input");
+				PMnumber.setAttribute('type', 'text');
+				PMnumber.setAttribute('placeholder', 'Credit Card Number');
+				PMnumber.setAttribute('size', '16');
+				PMdiv.appendChild(PMnumber);
+			}
+			if(PMv=="DB")
+			{
+				console.log('hi');
+				var PMdiv =  document.getElementById('option_selected');
+				if (PMdiv.childElementCount == 1) {
+          PMdiv.removeChild(PMdiv.firstChild);
+        }
+				var PMnumber = document.createElement("input");
+				PMnumber.setAttribute('type', 'text');
+				PMnumber.setAttribute('placeholder', 'Debit Card Number');
+				PMnumber.setAttribute('size', '16');
+				PMdiv.appendChild(PMnumber);
+			}
+      if (PMv=='COD') {
+        var PMdiv =  document.getElementById('option_selected');
+				if (PMdiv.childElementCount == 1) {
+          PMdiv.removeChild(PMdiv.firstChild);
+        }
+      }
+		}
+	}
+	</script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="test.php">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="toilet_cleaner.php">Toilet Cleaners</a><!-- Page 2 -->
+            <a href="body_wash.php">Body Wash</a><!-- Page 3 -->
+            <a href="utensils.php">Utensils</a><!-- Page 7 -->
+            <a href="cooking_oil.php">Cooking Oil</a><!-- Page 9 -->
+            <a href="gardening_equipment.php">Garndening Equipment</a><!-- Page 10 -->
+            </div>
+        </div>
+        <a href="cart.php" style="float: right;">&#x1F6D2;</a>  
+    </div>
+    <h1>An error had occured, please enter values again</h1>
+	<div class="container">
+  <form action="action_page.php" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fname" placeholder="First Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Payment_Method">Payment Method</label>
+      </div>
+      <div class="col-75">
+        <select id="Payment_Method" name="PM" >
+          <option value="COD">Cash On Delivery</option>
+          <option value="CC">Credit Card</option>
+          <option value="DB">Debit Card</option>
+        </select>
+      </div>
+    </div>
+	<div id="option_selected" style="width:200px;margin:10px;margin-left:500px;"></div>
+    <div class="row">
+      <div class="col-25">
+        <label for="address">Address</label>
+      </div>
+      <div class="col-75">
+        <textarea id="address" name="address" placeholder="Please enter your address" style="height:200px"></textarea>
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="tel">Phone Number</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="tel" name="phoneno" placeholder="Phone Number">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</body>
+</html>
