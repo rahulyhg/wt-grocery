@@ -7,4 +7,4 @@ How to run this website -
 1. Download this project into your XAMPP htdocs folder.
 2. Start XAMPP and MySQL.
 3. Import **products.sql** and **userinfo.sql** into the test database in the phpMyAdmin.
-4. Open test.php using localhost.
+4. Open **test.php** using localhost.
