@@ -1,5 +1,5 @@
-#Web Technology Project 
-###This project is entirely made in only PHP, JavaScript, HTML and CSS.
+# Web Technology Project 
+### This project is entirely made in only PHP, JavaScript, HTML and CSS.
 
 This website is a basic online grocery shopping website which performs basic functionality of an online e-commerce website.
 
