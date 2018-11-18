@@ -58,7 +58,7 @@ mysqli_close($conn);
 ?>
 <html> 
     <head>
-        <title>Test</title>
+        <title>Home</title>
         <link rel="stylesheet" href="CSS/test.css">
     </head>
     <body>

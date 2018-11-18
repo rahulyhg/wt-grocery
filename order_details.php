@@ -13,9 +13,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cart</title>
-  <link rel="stylesheet" href="cart.css"/>
-  <link rel="stylesheet" href="test.css"/>
+  <title>Order</title>
+  <link rel="stylesheet" href="CSS/cart.css"/>
+  <link rel="stylesheet" href="CSS/test.css"/>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             <a href="cart.php" style="float: right;">&#x1F6D2;</a>
             <a href="order_detail.html" style="float: right">Order Details</a>  
         </div>
-        <h1>Cart</h1>
+        <h1>Ordered Items</h1>
 <?php
 
 if(isset($cart_item)){
@@ -108,10 +108,6 @@ if(isset($cart_item)){
                 <td>First Name</td>
                <td style="text-align:right;"><?php echo $result['fname']?></td>
                 </tr>
-            <tr>
-                <td>Last name</td>
-                <td style="text-align:right;"><?php echo $result['lname']?></td>
-            </tr>
             <tr>
                 <td>Last name</td>
                 <td style="text-align:right;"><?php echo $result['lname']?></td>
